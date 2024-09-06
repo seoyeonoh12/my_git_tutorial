@@ -100,14 +100,35 @@ Run command `git config --global --list`
 ### VII. Push and Pull
 **!** A bridge works both ways: Always push first and then pull to synchronize local and remote repository
 
+### VIII. Running a parallel timeline: Branches
+1. Create a branch outside Main/master
+
+    `$ git branch <Branch name>` 
+
+2. Check the list of branches
+
+    `$git branch -a`
+
+3. Enter the branch you created 
+
+    `$git checkout <Branch name>`
+
+4. Check which branch you are in now 
+
+    `$ git status`
+
+5. To return back to the main 
+    `$ git checkout main`
+
+**!** The files you created in your branch will not be shown in the Main.
+
 
 $ git branch
 --list: shows only branches at local repository
 -a : shows all branches
 
 
-
-### VIII. Summary
+### Summary
 1. Initialize Git on a folder, making it a Repository
 2. Git creates a hidden folder to keep track of changes in that folder
 3. When a file is changed, added or deleted, it is considered modified
