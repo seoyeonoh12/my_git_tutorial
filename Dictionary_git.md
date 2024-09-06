@@ -100,14 +100,9 @@ Run command `git config --global --list`
 ### VII. Push and Pull
 **!** A bridge works both ways: Always push first and then pull to synchronize local and remote repository
 
-
-
     $ git push
     
     $ git pull
-
-
-
 
 
 ### VIII. Running a parallel timeline: Branches
@@ -123,6 +118,11 @@ Run command `git config --global --list`
 
     `$ git checkout <Branch name>`
 
+    --list: shows only branches at local repository
+    
+    -a : shows all branches
+
+
 4. Check which branch you are in now 
 
     `$ git status`
@@ -132,13 +132,18 @@ Run command `git config --global --list`
 
 **!** The files you created in your branch will not be shown in the Main.
 
+### IX. Tagging
+Creating a name to a certain versioned commit
 
-$ git branch
---list: shows only branches at local repository
--a : shows all branches
+```
+$ git tag V1.0
+$ git tag --list
+V1.0
+```
+Then the head commit is tagged as V1.0
 
 
-### Summary
+### X. Summary
 1. Initialize Git on a folder, making it a Repository
 2. Git creates a hidden folder to keep track of changes in that folder
 3. When a file is changed, added or deleted, it is considered modified
