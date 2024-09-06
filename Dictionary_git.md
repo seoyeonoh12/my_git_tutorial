@@ -41,7 +41,6 @@
 4. Remote Repository: github repository
 
 
-
 ### V. Summary
 1. Initialize Git on a folder, making it a Repository
 2. Git creates a hidden folder to keep track of changes in that folder
@@ -49,13 +48,12 @@
 4. You select the modified files you want to Stage
 5. The Staged files are committed, which prompts Git to store a permanent snapshot of the files
     - Git allows you to see the full history of every commit.
-7. You can revert back to any previous commit.
-8. Link a bridge between local repository and remote repository
+6. You can revert back to any previous commit.
+7. Link a bridge between local repository and remote repository
     - Give the same names (advised)
-9. You can create tag to a certain commit e.g. V1.0
-10. You can work on the same project with your collaborators. To avoid conflicts, it is better to make use of branches.
-11. You can merge branches to the master/main branch.
-
+8. You can create tag to a certain commit e.g. V1.0
+9. You can work on the same project with your collaborators. To avoid conflicts, it is better to make use of branches.
+10. You can merge branches to the master/main branch.
 
 
 ### VI. Some other tips to visualize a markdown file
