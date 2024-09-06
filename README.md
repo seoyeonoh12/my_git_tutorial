@@ -10,3 +10,5 @@ This is a project which includes a dictionary with git and github cocepts, along
 - commands_git.md: with a list of commands
 - Image (.PNG, .JPG) files are random tests
 - .gitignore
+
+Bruna Piereck is an awsome teacher!!!!
