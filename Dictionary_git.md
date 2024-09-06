@@ -100,6 +100,16 @@ Run command `git config --global --list`
 ### VII. Push and Pull
 **!** A bridge works both ways: Always push first and then pull to synchronize local and remote repository
 
+
+
+    $ git push
+    
+    $ git pull
+
+
+
+
+
 ### VIII. Running a parallel timeline: Branches
 1. Create a branch outside Main/master
 
@@ -107,11 +117,11 @@ Run command `git config --global --list`
 
 2. Check the list of branches
 
-    `$git branch -a`
+    `$ git branch -a`
 
 3. Enter the branch you created 
 
-    `$git checkout <Branch name>`
+    `$ git checkout <Branch name>`
 
 4. Check which branch you are in now 
 
