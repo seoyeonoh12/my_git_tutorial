@@ -118,5 +118,4 @@ To fetch and download content from a remote repository and immediately update th
 **!** If you lost your local repository by accident, 
 `git clone <SSH repo>`
 
-Trying to making changes in the branch of the collaborators
 

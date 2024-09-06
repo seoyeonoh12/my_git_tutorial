@@ -101,6 +101,11 @@ Run command `git config --global --list`
 **!** A bridge works both ways: Always push first and then pull to synchronize local and remote repository
 
 
+$ git branch
+--list: shows only branches at local repository
+-a : shows all branches
+
+
 
 ### VIII. Summary
 1. Initialize Git on a folder, making it a Repository
@@ -125,7 +130,5 @@ Code `location $ ls`
 Several lines of codes
 
 ```
-## making changes
-Making changes
-To try 
+
 
