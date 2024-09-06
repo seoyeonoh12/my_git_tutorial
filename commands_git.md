@@ -1,6 +1,36 @@
 # Commands from Git
 
-###  I. Basic routine for commiting
+### I. Starting with Git
+**!** NEVER intialize git project under the sub-folder of git project!
+
+
+1. Initialize git project on your working directory (a folder for the project)
+
+    `$ git init` returns
+    
+     ```
+     Initialized empty Git repository in /Users/seooh/Desktop/Trainings/VIB_Git_Github2024/my_git_tutorial/.git/
+     ```
+
+2. Check the respository 
+`$ ls -a` shows all the hidden files
+
+    
+
+3. Take a snapshot of my work (Commit)
+
+    `$ git commit -m "meaningful message"`
+
+    Explain the purpose to keep the change in the timeline
+    
+    **! What is meaningful?**
+    - Why was it changed
+    - How this addresses the issue
+    - Effects due to the change
+    - Limitations of the change
+
+
+###  II. Basic routine for commiting
 
 
 That is how I save a snapshot/point in time
@@ -10,14 +40,11 @@ git add <name of the file>
 git commit -m "meaningful msg"
 ```
 
-### II. How to check the status of my files/directories in my git project
+### III. How to check the status of my files/directories in my git project
 
 `$ git status` tells you
-- master/main
-- Untracked files
-- see things are happening
+- Which branch you are in master/main or other branches
 - Changes to be committed, changes not staged (developing area, working on it before), Untracked files (= completely new)
-- `$ git restore` discards changes in working directory e.g. if you regret about changes you have made, let the changes exit from the stagin area and discard changes
 
 Check if they are uncommitted, unstaged or untracked
 
@@ -33,17 +60,22 @@ Untracked files:
         vib.png
 ```
 
-### III. Commiting without -m
+`$ git restore`
+
+- Discards changes in working directory e.g. if you regret about changes you have made, let the changes exit from the stagin area and discard changes
+
+### IV. Commiting without -m
 If you try `$ git commit` without -m, It might give an error.
 
-Change editor to get it back to vi
+Change editor to get it back to vi:
+
 `$ git config --global --unset-all core.editor`
 
 If you do `$ git commit` again, you will open the config file via vi editor
 - In the opened file, you can add text for the title of the new commit
 
 
-### IV. At staging area: Add together files that you want to commit together
+### V. At staging area: Add files that you want to commit together
 
 - git all files `$ git add *`
 
@@ -54,7 +86,7 @@ If you do `$ git commit` again, you will open the config file via vi editor
 - `$ git add file1 file2` 
 
 
-### V. Exercises: Knowing my timeline
+### VI. Exercises: Knowing my timeline
 A. How can I travel within the timeline to check for differences in my versions? 
 - by `$ git diff`, you can compare the differences between the current version and previous version (the last time you committed). 
     - `$ git diff <commit id1> <commit id2>` 
@@ -69,7 +101,7 @@ B. How can I see the history of my timeline?
 - View commit history	Listing commits	Commit metadata (author, message, date)
 
 
-In summary:
+In Summary:
 
 - git log is for viewing commit history.
 - git diff is for viewing file differences.
@@ -87,7 +119,7 @@ Expected output:
 On branch main
 nothing to commit, working tree clean
 ```
-2. `$ git push`: sending the local repos. to remote repos. 
+2. `$ git push` : sending the local repos. to remote repos. 
 If you "push" for the first time, it will give an error with the following message:
 ```
 fatal: The current branch main has no upstream branch.
@@ -111,9 +143,69 @@ Enter passphrase for key '/Users/seooh/.ssh/id_ed25519':
 Everything up-to-date
 ```
 
-To fetch and download content from a remote repository and immediately update the local repository to match that content
+3. `$ git pull` : fetch and download content from a remote repository and immediately update the local repository to match that content
 `$ git pull`
 
 
-**!** If you lost your local repository by accident, 
+**!** If you lost your local repository by accident, clone the remote repository to your local one by 
 `git clone <SSH repo>`
+
+
+### VII. Checking the user information
+
+Run command `git config --global --list`
+
+    Expected output:
+
+    filter.lfs.smudge=git-lfs smudge -- %f
+    filter.lfs.process=git-lfs filter-process
+    filter.lfs.required=true
+    filter.lfs.clean=git-lfs clean -- %f
+    user.name=Seoyeon Oh
+    user.email=Seoyeon.Oh@UGent.be
+    core.editor=code --wait
+
+
+**!** *Git does not store a separate copy of every file in every commit, but keeps track of changes made in each commit!*
+
+
+### VIII. Running a parallel timeline - Branches
+1. Create a branch outside Main/master
+
+    `$ git branch <Branch name>` 
+
+2. Check the list of branches
+
+    `$ git branch -a`
+
+3. Enter the branch you created 
+
+    `$ git checkout <Branch name>`
+
+    --list: shows only branches at local repository
+    
+    -a : shows all branches
+
+
+4. Check which branch you are in now 
+
+    `$ git status`
+
+5. To return back to the main 
+    `$ git checkout main`
+
+**!** The files you created in your branch will not be shown in the Main.
+
+### IX. Tagging
+Creating a name to a certain versioned commit
+
+```
+$ git tag V1.0
+$ git tag --list
+V1.0
+$ git push --tags
+```
+Then the head commit is tagged as V1.0.
+
+! Always include --tags when you want to push with the tags you created.
+

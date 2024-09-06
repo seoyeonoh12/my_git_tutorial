@@ -38,112 +38,11 @@
     Where you save snapshots. Check by `ls -la`
     `git add` 
 
-4. Remote Repository:
+4. Remote Repository: github repository
 
 
 
-
-
-
-### V. Working with Git
-
-1. Initialize git project on your working directory (a folder for the project)
-
-    `$ git init`
-    
-    returns
-    
-     ```
-     Initialized empty Git repository in /Users/seooh/Desktop/Trainings/VIB_Git_Github2024/my_git_tutorial/.git/
-     ```
-
-
-**!** NEVER intialize git project under the sub-folder of git project!
-
-2. Check the respository 
-`$ ls -a` shows all the hidden files
-
-    
-
-3. Take a snapshot of my work (Commit)
-
-    `$ git commit -m "meaningful message"`
-
-    Explain the purpose to keep the change in the timeline
-    
-    **! What is meaningful?**
-    - Why was it changed
-    - How this addresses the issue
-    - Effects due to the change
-    - Limitations of the change
-
-
-### VI. Checking the user information
-
-Run command `git config --global --list`
-
-    Expected output:
-
-    ```
-    filter.lfs.smudge=git-lfs smudge -- %f
-    filter.lfs.process=git-lfs filter-process
-    filter.lfs.required=true
-    filter.lfs.clean=git-lfs clean -- %f
-    user.name=Seoyeon Oh
-    user.email=Seoyeon.Oh@UGent.be
-    core.editor=code --wait
-    ```
-
-**!** *Git does not store a separate copy of every file in every commit, but keeps track of changes made in each commit!*
-
-
-### VII. Push and Pull
-**!** A bridge works both ways: Always push first and then pull to synchronize local and remote repository
-
-    $ git push
-    
-    $ git pull
-
-
-### VIII. Running a parallel timeline: Branches
-1. Create a branch outside Main/master
-
-    `$ git branch <Branch name>` 
-
-2. Check the list of branches
-
-    `$ git branch -a`
-
-3. Enter the branch you created 
-
-    `$ git checkout <Branch name>`
-
-    --list: shows only branches at local repository
-    
-    -a : shows all branches
-
-
-4. Check which branch you are in now 
-
-    `$ git status`
-
-5. To return back to the main 
-    `$ git checkout main`
-
-**!** The files you created in your branch will not be shown in the Main.
-
-### IX. Tagging
-Creating a name to a certain versioned commit
-
-```
-$ git tag V1.0
-$ git tag --list
-V1.0
-```
-Then the head commit is tagged as V1.0
-
-
-### X. Summary
+### V. Summary
 1. Initialize Git on a folder, making it a Repository
 2. Git creates a hidden folder to keep track of changes in that folder
 3. When a file is changed, added or deleted, it is considered modified
@@ -153,10 +52,13 @@ Then the head commit is tagged as V1.0
 7. You can revert back to any previous commit.
 8. Link a bridge between local repository and remote repository
     - Give the same names (advised)
+9. You can create tag to a certain commit e.g. V1.0
+10. You can work on the same project with your collaborators. To avoid conflicts, it is better to make use of branches.
+11. You can merge branches to the master/main branch.
 
 
 
-### Some other tips to visualize a markdown file
+### VI. Some other tips to visualize a markdown file
 #### Press Command+Shift+V will show the preview
 **bold**
 *italic*
@@ -166,5 +68,3 @@ Code `location $ ls`
 Several lines of codes
 
 ```
-
-
