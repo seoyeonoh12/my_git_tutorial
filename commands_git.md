@@ -117,3 +117,6 @@ To fetch and download content from a remote repository and immediately update th
 
 **!** If you lost your local repository by accident, 
 `git clone <SSH repo>`
+
+
+### Changes in the file, to see problems when both collaborator are working on the same time
